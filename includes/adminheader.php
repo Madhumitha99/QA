@@ -1,3 +1,16 @@
+<?php
+session_start();
+include('connection.php');
+if (isset($_SESSION['username'])) {
+	
+}
+else {
+    echo "<script>alert('you need to login first');
+    window.location.href='../index.php';</script>";	
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +22,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ALL POST</title>
+    <title>Dashboard - <?php echo $_SESSION['email']; ?></title>
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/tinymce/tinymce.min.js"></script>
